@@ -22,13 +22,13 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
         // GET: Customers
-        
+        [Authorize(Roles = RoleName.CanManageMovies + "," + RoleName.CanManageCustomers)]
         public ViewResult Index()
         {
             var customers = _context.Customers.Include(c=> c.MembershipType).ToList();
             return View(customers);
         }
-
+        [Authorize(Roles = RoleName.CanManageMovies + "," + RoleName.CanManageCustomers)]
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c=> c.MembershipType).SingleOrDefault(c=> c.Id == id);
@@ -38,7 +38,7 @@ namespace Vidly.Controllers
 
             return View(customer);
         }
-
+        [Authorize(Roles = RoleName.CanManageMovies + "," + RoleName.CanManageCustomers)]
         public ViewResult New()
         {
             var membershiptypes = _context.MembershipTypes.ToList();
@@ -50,7 +50,7 @@ namespace Vidly.Controllers
             
             return View("CustomerForm", viewModel);
         }
-
+        [Authorize(Roles = RoleName.CanManageMovies + "," + RoleName.CanManageCustomers)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -66,7 +66,7 @@ namespace Vidly.Controllers
 
             return View("CustomerForm", viewModel);
         }
-
+        [Authorize(Roles = RoleName.CanManageMovies + "," + RoleName.CanManageCustomers)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)

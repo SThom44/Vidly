@@ -252,3 +252,6 @@ C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.dll
 C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.pdb
+C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.Migrations.tableSource.resources
+C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.Migrations.sendUsers.resources
+C:\Users\shawn\Desktop\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
